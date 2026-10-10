@@ -33,6 +33,14 @@ jobs:
       - name: Instalar dependencias
         run: pip install requests python-dotenv
 
+      - name: Testar conexao com o Instagram (falha se o token venceu)
+        working-directory: scripts
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_BUSINESS_ID: "17841431882100470"
+          META_API_VERSION: v21.0
+        run: python publish_instagram.py --test
+
       - name: Publicar posts que ja chegaram na hora
         working-directory: scripts
         env:
