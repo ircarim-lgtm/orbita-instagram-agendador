@@ -110,7 +110,7 @@ def wait_ready(container_id: str, tries: int = 24):
 
 
 def publish_reel(video_url: str, caption: str) -> str:
-    """Cria o container de Reels e espera o Instagram processar o video."""
+    """Cria o container de Reels a partir de uma URL publica e espera o processamento."""
     data = api("POST", f"{IG_ID}/media", data={
         "media_type": "REELS",
         "video_url": video_url,
@@ -190,17 +190,17 @@ def run(images: list, caption: str, dry_run: bool):
 
 def run_video(video: str, caption: str, dry_run: bool):
     check_credentials()
-    if not Path(video).exists():
+    if not video.startswith("https://") and not Path(video).exists():
         fail(f"Arquivo nao encontrado: {video}")
     print("\nPublicando Reels...")
     if dry_run:
         print("[DRY RUN] Tudo certo. Remova --dry-run para publicar de verdade.")
         return
-    print("\nPasso 1: hospedando o video...")
-    url = host_file(video)
-    print("\nPasso 2: o Instagram esta processando o video...")
+    print("\nPasso 1: preparando o video...")
+    url = video if video.startswith("https://") else host_file(video)
+    print("\nO Instagram esta processando o video...")
     creation_id = publish_reel(url, caption)
-    print("\nPasso 3: publicando...")
+    print("\nPasso 2: publicando...")
     print(f"\nPublicado com sucesso! Post ID: {media_publish(creation_id)}")
 
 

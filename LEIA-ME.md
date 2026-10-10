@@ -8,8 +8,9 @@ Publica Reels automaticamente em **@orbita_labs_dev** pelo GitHub Actions, sem p
 - Cada post publicado é registrado em `published.json`, para não repetir.
 - Se um post passar de 6 horas do horário, ele **não** é publicado e o GitHub mostra um erro.
 
-## Requisito
-Secret do repositório `INSTAGRAM_ACCESS_TOKEN` (Settings → Secrets and variables → Actions).
+## Requisitos
+- **Repositório público.** O Instagram baixa o vídeo por uma URL do GitHub (`raw.githubusercontent.com`), que só funciona em repositório público. O Secret continua protegido mesmo com o repositório público.
+- Secret do repositório `INSTAGRAM_ACCESS_TOKEN` (Settings → Secrets and variables → Actions).
 O token do Instagram vence em cerca de 60 dias: gere outro no painel da Meta (Casos de uso → Personalizar → Configuração da API com login do Instagram → Gerar token) e troque o Secret.
 
 ## Testar sem publicar

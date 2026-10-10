@@ -13,12 +13,31 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import requests
+
 import publish_instagram as ig
 
 ROOT = Path(__file__).resolve().parent.parent
 CALENDAR = ROOT / "calendar.json"
 PUBLISHED = ROOT / "published.json"
 MAX_LATE = timedelta(hours=float(os.getenv("MAX_LATE_HOURS", "6")))
+# O Instagram busca o video por uma URL publica. Usamos o proprio GitHub (raw).
+REPO = os.getenv("GITHUB_REPOSITORY", "ircarim-lgtm/orbita-instagram-agendador")
+MEDIA_BASE_URL = os.getenv(
+    "MEDIA_BASE_URL", f"https://raw.githubusercontent.com/{REPO}/main"
+).rstrip("/")
+
+
+def media_url(post: dict) -> str:
+    """URL publica do video; confere que o Instagram vai conseguir baixar."""
+    url = f"{MEDIA_BASE_URL}/{post['video']}"
+    head = requests.head(url, allow_redirects=True, timeout=30)
+    if head.status_code != 200:
+        ig.fail(
+            f"O video nao esta acessivel em {url} (HTTP {head.status_code}). "
+            "O repositorio precisa ser PUBLICO para o Instagram baixar o video."
+        )
+    return url
 
 
 def load(path: Path, default):
@@ -62,13 +81,11 @@ def main() -> int:
 
     for post in to_publish:
         print(f"\n=== Publicando {post['id']}: {post['title']} ===")
-        video = str(ROOT / post["video"])
         if dry_run:
-            ig.run_video(video, post["caption"], dry_run=True)
+            ig.run_video(str(ROOT / post["video"]), post["caption"], dry_run=True)
             continue
         ig.check_credentials()
-        url = ig.host_file(video)
-        creation_id = ig.publish_reel(url, post["caption"])
+        creation_id = ig.publish_reel(media_url(post), post["caption"])
         post_id = ig.media_publish(creation_id)
         published[post["id"]] = {
             "post_id": post_id,
