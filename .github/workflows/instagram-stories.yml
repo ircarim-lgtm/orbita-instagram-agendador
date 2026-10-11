@@ -1,0 +1,65 @@
+name: Instagram - publicar Stories agendados
+
+on:
+  schedule:
+    # A cada 15 min entre 15:00 e 20:59 UTC (12:00 a 17:59 em Brasilia).
+    # O GitHub pode atrasar o disparo; as janelas extras garantem a publicacao.
+    - cron: "7,22,37,52 15-20 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Apenas validar, sem publicar"
+        type: boolean
+        default: true
+
+concurrency:
+  group: instagram-stories
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  stories:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install requests python-dotenv
+
+      - name: Testar conexao com o Instagram (falha se o token venceu)
+        working-directory: scripts
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_BUSINESS_ID: "17841431882100470"
+          META_API_VERSION: v21.0
+        run: python publish_instagram.py --test
+
+      - name: Publicar Stories do dia
+        working-directory: scripts
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_BUSINESS_ID: "17841431882100470"
+          META_API_VERSION: v21.0
+          MAX_LATE_HOURS: "8"
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: python run_stories.py
+
+      - name: Registrar o que foi publicado
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published_stories.json
+          if git diff --cached --quiet; then
+            echo "Nada novo para registrar."
+          else
+            git commit -m "Instagram: registrar Stories publicados"
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

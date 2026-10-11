@@ -1,0 +1,79 @@
+[
+  {
+    "id": "2026-10-12",
+    "publish_at": "2026-10-12T12:00:00-03:00",
+    "images": [
+      "stories/dia1_01_gancho.jpg",
+      "stories/dia1_02_numeros.jpg",
+      "stories/dia1_03_cwv.jpg",
+      "stories/dia1_04_brasil.jpg",
+      "stories/dia1_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-13",
+    "publish_at": "2026-10-13T12:00:00-03:00",
+    "images": [
+      "stories/dia2_01_gancho.jpg",
+      "stories/dia2_02_tempo.jpg",
+      "stories/dia2_03_paginas.jpg",
+      "stories/dia2_04_rejeicao.jpg",
+      "stories/dia2_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-14",
+    "publish_at": "2026-10-14T12:00:00-03:00",
+    "images": [
+      "stories/dia3_01_gancho.jpg",
+      "stories/dia3_02_mito.jpg",
+      "stories/dia3_03_estudo.jpg",
+      "stories/dia3_04_velocidade.jpg",
+      "stories/dia3_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-15",
+    "publish_at": "2026-10-15T12:00:00-03:00",
+    "images": [
+      "stories/dia4_01_gancho.jpg",
+      "stories/dia4_02_redes.jpg",
+      "stories/dia4_03_site_vs_rede.jpg",
+      "stories/dia4_04_anuncios.jpg",
+      "stories/dia4_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-16",
+    "publish_at": "2026-10-16T12:00:00-03:00",
+    "images": [
+      "stories/dia5_01_gancho.jpg",
+      "stories/dia5_02_video.jpg",
+      "stories/dia5_03_letras.jpg",
+      "stories/dia5_04_horizontal.jpg",
+      "stories/dia5_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-17",
+    "publish_at": "2026-10-17T12:00:00-03:00",
+    "images": [
+      "stories/dia6_01_gancho.jpg",
+      "stories/dia6_02_porte.jpg",
+      "stories/dia6_03_setor.jpg",
+      "stories/dia6_04_mundo.jpg",
+      "stories/dia6_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-18",
+    "publish_at": "2026-10-18T12:00:00-03:00",
+    "images": [
+      "stories/dia7_01_gancho.jpg",
+      "stories/dia7_02_velocidade.jpg",
+      "stories/dia7_03_mercado.jpg",
+      "stories/dia7_04_leitura.jpg",
+      "stories/dia7_05_cta.jpg"
+    ]
+  }
+]
