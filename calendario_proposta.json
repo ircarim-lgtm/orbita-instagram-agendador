@@ -1,0 +1,60 @@
+[
+  {
+    "id": "2026-10-12",
+    "tipo": "Reel",
+    "title": "Seu site carrega em quanto tempo?",
+    "video": "media/f_velocidade.mp4"
+  },
+  {
+    "id": "2026-10-13",
+    "tipo": "Carrossel",
+    "title": "Checklist: seu cliente te vê primeiro no celular",
+    "images": [
+      "carrosseis/c_mobile_01.jpg",
+      "carrosseis/c_mobile_02.jpg",
+      "carrosseis/c_mobile_03.jpg",
+      "carrosseis/c_mobile_04.jpg",
+      "carrosseis/c_mobile_05.jpg",
+      "carrosseis/c_mobile_06.jpg",
+      "carrosseis/c_mobile_07.jpg"
+    ],
+    "caption": "Boa parte das pessoas vai abrir seu site pelo celular. Se o botão está longe do polegar ou o texto exige zoom, o contato se perde.\n\nPasse os slides e responda às 5 perguntas para o seu site. Salve para revisar depois.\n\nDesenhamos cada site começando pela tela pequena: leitura fácil, botão ao alcance e chamada para o WhatsApp à vista.\n\nQuer revisar o seu no celular? Mande \"ÓRBITA\" por DM.\n\n#orbitalabs #mobilefirst #sitesresponsivos #uxdesign #designdesites #whatsappbusiness"
+  },
+  {
+    "id": "2026-10-14",
+    "tipo": "Reel",
+    "title": "Quando procuram, seu negócio aparece?",
+    "video": "media/h_busca_local.mp4"
+  },
+  {
+    "id": "2026-10-15",
+    "tipo": "Carrossel",
+    "title": "Quantas vezes você digita o mesmo dado?",
+    "images": [
+      "carrosseis/c_integracoes_01.jpg",
+      "carrosseis/c_integracoes_02.jpg",
+      "carrosseis/c_integracoes_03.jpg",
+      "carrosseis/c_integracoes_04.jpg",
+      "carrosseis/c_integracoes_05.jpg"
+    ],
+    "caption": "Formulário, mensagem, agenda e pagamento ligados: o dado passa de um para o outro sozinho, sem digitar duas vezes.\n\nMenos tarefa repetida, menos erro e mais tempo para atender quem importa.\n\nFluxo ilustrativo, conceito demonstrativo.\n\nQual tarefa repetida você gostaria de tirar do seu dia? Mande \"ÓRBITA\" por DM.\n\n#orbitalabs #automacao #automacaodeprocessos #produtividade #integracoes #negociosdigitais"
+  },
+  {
+    "id": "2026-10-16",
+    "tipo": "Reel",
+    "title": "Seu site com cara de produto premium",
+    "video": "media/j_liquidglass.mp4"
+  },
+  {
+    "id": "2026-10-17",
+    "tipo": "Reel (adiado)",
+    "title": "Seu cliente te vê primeiro no celular",
+    "video": "media/g_mobile.mp4"
+  },
+  {
+    "id": "2026-10-19",
+    "tipo": "Reel (adiado)",
+    "title": "Quando um sistema conversa com o outro",
+    "video": "media/i_integracoes.mp4"
+  }
+]

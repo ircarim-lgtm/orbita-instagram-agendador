@@ -28,16 +28,20 @@ MEDIA_BASE_URL = os.getenv(
 ).rstrip("/")
 
 
-def media_url(post: dict) -> str:
-    """URL publica do video; confere que o Instagram vai conseguir baixar."""
-    url = f"{MEDIA_BASE_URL}/{post['video']}"
+def public_url(rel: str) -> str:
+    """URL publica de um arquivo do repo; confere que o Instagram vai conseguir baixar."""
+    url = f"{MEDIA_BASE_URL}/{rel}"
     head = requests.head(url, allow_redirects=True, timeout=30)
     if head.status_code != 200:
         ig.fail(
-            f"O video nao esta acessivel em {url} (HTTP {head.status_code}). "
-            "O repositorio precisa ser PUBLICO para o Instagram baixar o video."
+            f"O arquivo nao esta acessivel em {url} (HTTP {head.status_code}). "
+            "O repositorio precisa ser PUBLICO para o Instagram baixar a midia."
         )
     return url
+
+
+def media_url(post: dict) -> str:
+    return public_url(post["video"])
 
 
 def load(path: Path, default):
@@ -96,7 +100,11 @@ def main() -> int:
     for post in to_publish:
         print(f"\n=== Publicando {post['id']}: {post['title']} ===")
         if dry_run:
-            ig.run_video(str(ROOT / post["video"]), post["caption"], dry_run=True)
+            if post.get("images"):
+                urls = [public_url(i) for i in post["images"]]
+                print(f"[DRY RUN] Carrossel com {len(urls)} imagens acessiveis: {urls[0]} ...")
+            else:
+                ig.run_video(str(ROOT / post["video"]), post["caption"], dry_run=True)
             continue
         ig.check_credentials()
         existing = already_on_instagram(post["caption"])
@@ -105,7 +113,10 @@ def main() -> int:
             published[post["id"]] = {"post_id": existing, "published_at": "ja estava no perfil"}
             PUBLISHED.write_text(json.dumps(published, indent=2) + "\n", encoding="utf-8")
             continue
-        creation_id = ig.publish_reel(media_url(post), post["caption"])
+        if post.get("images"):
+            creation_id = ig.publish_carousel([public_url(i) for i in post["images"]], post["caption"])
+        else:
+            creation_id = ig.publish_reel(media_url(post), post["caption"])
         post_id = ig.media_publish(creation_id)
         published[post["id"]] = {
             "post_id": post_id,
