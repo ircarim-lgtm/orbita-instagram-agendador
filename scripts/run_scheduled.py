@@ -51,6 +51,20 @@ def now_utc() -> datetime:
     return datetime.now(timezone.utc)
 
 
+def already_on_instagram(caption: str):
+    """Protecao contra post duplicado: se o Reels ja esta no perfil, devolve o id dele."""
+    try:
+        data = ig.api("GET", f"{ig.IG_ID}/media", params={
+            "fields": "id,caption", "limit": "30", "access_token": ig.TOKEN,
+        })
+    except SystemExit:
+        return None
+    for m in data.get("data", []):
+        if (m.get("caption") or "").strip() == caption.strip():
+            return m["id"]
+    return None
+
+
 def due_posts(calendar: list, published: dict, now: datetime):
     """Devolve (para_publicar, perdidos)."""
     to_publish, missed = [], []
@@ -85,6 +99,12 @@ def main() -> int:
             ig.run_video(str(ROOT / post["video"]), post["caption"], dry_run=True)
             continue
         ig.check_credentials()
+        existing = already_on_instagram(post["caption"])
+        if existing:
+            print(f"Este post ja esta no Instagram (id {existing}). Registrando e nao publicando de novo.")
+            published[post["id"]] = {"post_id": existing, "published_at": "ja estava no perfil"}
+            PUBLISHED.write_text(json.dumps(published, indent=2) + "\n", encoding="utf-8")
+            continue
         creation_id = ig.publish_reel(media_url(post), post["caption"])
         post_id = ig.media_publish(creation_id)
         published[post["id"]] = {
