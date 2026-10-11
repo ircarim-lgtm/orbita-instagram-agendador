@@ -1,7 +1,7 @@
 [
   {
-    "id": "2026-10-12",
-    "publish_at": "2026-10-12T12:00:00-03:00",
+    "id": "2026-10-11",
+    "publish_at": "2026-10-11T11:00:00-03:00",
     "images": [
       "stories/dia1_01_gancho.jpg",
       "stories/dia1_02_numeros.jpg",
@@ -11,8 +11,8 @@
     ]
   },
   {
-    "id": "2026-10-13",
-    "publish_at": "2026-10-13T12:00:00-03:00",
+    "id": "2026-10-12",
+    "publish_at": "2026-10-12T12:00:00-03:00",
     "images": [
       "stories/dia2_01_gancho.jpg",
       "stories/dia2_02_tempo.jpg",
@@ -22,8 +22,8 @@
     ]
   },
   {
-    "id": "2026-10-14",
-    "publish_at": "2026-10-14T12:00:00-03:00",
+    "id": "2026-10-13",
+    "publish_at": "2026-10-13T12:00:00-03:00",
     "images": [
       "stories/dia3_01_gancho.jpg",
       "stories/dia3_02_mito.jpg",
@@ -33,8 +33,8 @@
     ]
   },
   {
-    "id": "2026-10-15",
-    "publish_at": "2026-10-15T12:00:00-03:00",
+    "id": "2026-10-14",
+    "publish_at": "2026-10-14T12:00:00-03:00",
     "images": [
       "stories/dia4_01_gancho.jpg",
       "stories/dia4_02_redes.jpg",
@@ -44,8 +44,8 @@
     ]
   },
   {
-    "id": "2026-10-16",
-    "publish_at": "2026-10-16T12:00:00-03:00",
+    "id": "2026-10-15",
+    "publish_at": "2026-10-15T12:00:00-03:00",
     "images": [
       "stories/dia5_01_gancho.jpg",
       "stories/dia5_02_video.jpg",
@@ -55,8 +55,8 @@
     ]
   },
   {
-    "id": "2026-10-17",
-    "publish_at": "2026-10-17T12:00:00-03:00",
+    "id": "2026-10-16",
+    "publish_at": "2026-10-16T12:00:00-03:00",
     "images": [
       "stories/dia6_01_gancho.jpg",
       "stories/dia6_02_porte.jpg",
@@ -66,8 +66,8 @@
     ]
   },
   {
-    "id": "2026-10-18",
-    "publish_at": "2026-10-18T12:00:00-03:00",
+    "id": "2026-10-17",
+    "publish_at": "2026-10-17T12:00:00-03:00",
     "images": [
       "stories/dia7_01_gancho.jpg",
       "stories/dia7_02_velocidade.jpg",
