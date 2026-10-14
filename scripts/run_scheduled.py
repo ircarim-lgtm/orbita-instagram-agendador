@@ -9,6 +9,7 @@ Roda a cada 15 minutos pelo GitHub Actions. Regras:
 """
 import json
 import os
+import time
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -42,6 +43,18 @@ def public_url(rel: str) -> str:
 
 def media_url(post: dict) -> str:
     return public_url(post["video"])
+
+
+def with_retry(fn, *args, tries: int = 3, wait: int = 20):
+    """Tenta de novo falhas passageiras da API (ex.: codigo 24 logo apos criar a midia)."""
+    for i in range(tries):
+        try:
+            return fn(*args)
+        except SystemExit:
+            if i == tries - 1:
+                raise
+            print(f"  Tentativa {i + 1}/{tries} falhou; nova tentativa em {wait}s...")
+            time.sleep(wait)
 
 
 def load(path: Path, default):
@@ -114,9 +127,9 @@ def main() -> int:
             PUBLISHED.write_text(json.dumps(published, indent=2) + "\n", encoding="utf-8")
             continue
         if post.get("images"):
-            creation_id = ig.publish_carousel([public_url(i) for i in post["images"]], post["caption"])
+            creation_id = with_retry(ig.publish_carousel, [public_url(i) for i in post["images"]], post["caption"])
         else:
-            creation_id = ig.publish_reel(media_url(post), post["caption"])
+            creation_id = with_retry(ig.publish_reel, media_url(post), post["caption"])
         post_id = ig.media_publish(creation_id)
         published[post["id"]] = {
             "post_id": post_id,

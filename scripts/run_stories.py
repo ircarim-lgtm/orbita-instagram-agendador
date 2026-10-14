@@ -49,6 +49,18 @@ def image_url(rel: str) -> str:
     return url
 
 
+def with_retry(fn, *args, tries: int = 4, wait: int = 15):
+    """A API do Instagram as vezes falha de forma passageira (ex.: codigo 24 logo apos criar a midia)."""
+    for i in range(tries):
+        try:
+            return fn(*args)
+        except SystemExit:
+            if i == tries - 1:
+                raise
+            print(f"  Tentativa {i + 1}/{tries} falhou; nova tentativa em {wait}s...")
+            time.sleep(wait)
+
+
 def publish_story(url: str) -> str:
     data = ig.api("POST", f"{ig.IG_ID}/media", data={
         "media_type": "STORIES", "image_url": url, "access_token": ig.TOKEN,
@@ -81,7 +93,7 @@ def main():
             if dry:
                 print(f"  (simulacao) Story {i + 1}/{len(day['images'])}: {url}")
                 continue
-            mid = publish_story(url)
+            mid = with_retry(publish_story, url)
             mine[str(i + 1)] = mid
             PUBLISHED.write_text(json.dumps(published, indent=2, ensure_ascii=False), encoding="utf-8")
             print(f"  Story {i + 1}/{len(day['images'])} publicado: {mid}")
