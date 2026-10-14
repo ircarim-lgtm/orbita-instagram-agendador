@@ -75,5 +75,93 @@
       "stories/dia7_04_leitura.jpg",
       "stories/dia7_05_cta.jpg"
     ]
+  },
+  {
+    "id": "2026-10-18",
+    "publish_at": "2026-10-18T12:00:00-03:00",
+    "images": [
+      "stories/dia08_01_gancho.jpg",
+      "stories/dia08_02_barras.jpg",
+      "stories/dia08_03_texto.jpg",
+      "stories/dia08_04_pergunta.jpg",
+      "stories/dia08_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-19",
+    "publish_at": "2026-10-19T12:00:00-03:00",
+    "images": [
+      "stories/dia09_01_gancho.jpg",
+      "stories/dia09_02_numeros.jpg",
+      "stories/dia09_03_texto.jpg",
+      "stories/dia09_04_dica.jpg",
+      "stories/dia09_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-20",
+    "publish_at": "2026-10-20T12:00:00-03:00",
+    "images": [
+      "stories/dia10_01_gancho.jpg",
+      "stories/dia10_02_p1.jpg",
+      "stories/dia10_03_p2.jpg",
+      "stories/dia10_04_p3.jpg",
+      "stories/dia10_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-21",
+    "publish_at": "2026-10-21T12:00:00-03:00",
+    "images": [
+      "stories/dia11_01_gancho.jpg",
+      "stories/dia11_02_estudo.jpg",
+      "stories/dia11_03_nuance.jpg",
+      "stories/dia11_04_pergunta.jpg",
+      "stories/dia11_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-22",
+    "publish_at": "2026-10-22T12:00:00-03:00",
+    "images": [
+      "stories/dia12_01_gancho.jpg",
+      "stories/dia12_02_polegar.jpg",
+      "stories/dia12_03_regras.jpg",
+      "stories/dia12_04_pergunta.jpg",
+      "stories/dia12_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-23",
+    "publish_at": "2026-10-23T12:00:00-03:00",
+    "images": [
+      "stories/dia13_01_gancho.jpg",
+      "stories/dia13_02_antes.jpg",
+      "stories/dia13_03_depois.jpg",
+      "stories/dia13_04_pergunta.jpg",
+      "stories/dia13_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-24",
+    "publish_at": "2026-10-24T12:00:00-03:00",
+    "images": [
+      "stories/dia14_01_gancho.jpg",
+      "stories/dia14_02_barras.jpg",
+      "stories/dia14_03_texto.jpg",
+      "stories/dia14_04_pergunta.jpg",
+      "stories/dia14_05_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-25",
+    "publish_at": "2026-10-25T12:00:00-03:00",
+    "images": [
+      "stories/dia15_01_gancho.jpg",
+      "stories/dia15_02_n1.jpg",
+      "stories/dia15_03_n2.jpg",
+      "stories/dia15_04_pergunta.jpg",
+      "stories/dia15_05_cta.jpg"
+    ]
   }
 ]
