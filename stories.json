@@ -163,5 +163,82 @@
       "stories/2026-10-25_4-poll.mp4",
       "stories/2026-10-25_5-cta.mp4"
     ]
+  },
+  {
+    "id": "2026-10-26",
+    "publish_at": "2026-10-26T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-26_1-hook.jpg",
+      "stories/2026-10-26_2-fato.jpg",
+      "stories/2026-10-26_3-visual.jpg",
+      "stories/2026-10-26_4-dica.jpg",
+      "stories/2026-10-26_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-27",
+    "publish_at": "2026-10-27T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-27_1-hook.jpg",
+      "stories/2026-10-27_2-fato.jpg",
+      "stories/2026-10-27_3-visual.jpg",
+      "stories/2026-10-27_4-dica.jpg",
+      "stories/2026-10-27_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-28",
+    "publish_at": "2026-10-28T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-28_1-hook.jpg",
+      "stories/2026-10-28_2-fato.jpg",
+      "stories/2026-10-28_3-visual.jpg",
+      "stories/2026-10-28_4-dica.jpg",
+      "stories/2026-10-28_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-29",
+    "publish_at": "2026-10-29T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-29_1-hook.jpg",
+      "stories/2026-10-29_2-fato.jpg",
+      "stories/2026-10-29_3-visual.jpg",
+      "stories/2026-10-29_4-dica.jpg",
+      "stories/2026-10-29_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-30",
+    "publish_at": "2026-10-30T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-30_1-hook.jpg",
+      "stories/2026-10-30_2-fato.jpg",
+      "stories/2026-10-30_3-visual.jpg",
+      "stories/2026-10-30_4-dica.jpg",
+      "stories/2026-10-30_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-10-31",
+    "publish_at": "2026-10-31T12:00:00-03:00",
+    "images": [
+      "stories/2026-10-31_1-hook.jpg",
+      "stories/2026-10-31_2-fato.jpg",
+      "stories/2026-10-31_3-visual.jpg",
+      "stories/2026-10-31_4-dica.jpg",
+      "stories/2026-10-31_5-cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-01",
+    "publish_at": "2026-11-01T12:00:00-03:00",
+    "images": [
+      "stories/2026-11-01_1-hook.jpg",
+      "stories/2026-11-01_2-fato.jpg",
+      "stories/2026-11-01_3-visual.jpg",
+      "stories/2026-11-01_4-dica.jpg",
+      "stories/2026-11-01_5-cta.jpg"
+    ]
   }
 ]
