@@ -113,55 +113,55 @@
     "id": "2026-10-21",
     "publish_at": "2026-10-21T12:00:00-03:00",
     "images": [
-      "stories/dia11_01_gancho.jpg",
-      "stories/dia11_02_estudo.jpg",
-      "stories/dia11_03_nuance.jpg",
-      "stories/dia11_04_pergunta.jpg",
-      "stories/dia11_05_cta.jpg"
+      "stories/2026-10-21_1-hook.mp4",
+      "stories/2026-10-21_2-news.mp4",
+      "stories/2026-10-21_3-visual.mp4",
+      "stories/2026-10-21_4-poll.mp4",
+      "stories/2026-10-21_5-cta.mp4"
     ]
   },
   {
     "id": "2026-10-22",
     "publish_at": "2026-10-22T12:00:00-03:00",
     "images": [
-      "stories/dia12_01_gancho.jpg",
-      "stories/dia12_02_polegar.jpg",
-      "stories/dia12_03_regras.jpg",
-      "stories/dia12_04_pergunta.jpg",
-      "stories/dia12_05_cta.jpg"
+      "stories/2026-10-22_1-hook.mp4",
+      "stories/2026-10-22_2-news.mp4",
+      "stories/2026-10-22_3-visual.mp4",
+      "stories/2026-10-22_4-tip.mp4",
+      "stories/2026-10-22_5-cta.mp4"
     ]
   },
   {
     "id": "2026-10-23",
     "publish_at": "2026-10-23T12:00:00-03:00",
     "images": [
-      "stories/dia13_01_gancho.jpg",
-      "stories/dia13_02_antes.jpg",
-      "stories/dia13_03_depois.jpg",
-      "stories/dia13_04_pergunta.jpg",
-      "stories/dia13_05_cta.jpg"
+      "stories/2026-10-23_1-hook.mp4",
+      "stories/2026-10-23_2-visual.mp4",
+      "stories/2026-10-23_3-tip.mp4",
+      "stories/2026-10-23_4-poll.mp4",
+      "stories/2026-10-23_5-cta.mp4"
     ]
   },
   {
     "id": "2026-10-24",
     "publish_at": "2026-10-24T12:00:00-03:00",
     "images": [
-      "stories/dia14_01_gancho.jpg",
-      "stories/dia14_02_barras.jpg",
-      "stories/dia14_03_texto.jpg",
-      "stories/dia14_04_pergunta.jpg",
-      "stories/dia14_05_cta.jpg"
+      "stories/2026-10-24_1-hook.mp4",
+      "stories/2026-10-24_2-visual.mp4",
+      "stories/2026-10-24_3-tip.mp4",
+      "stories/2026-10-24_4-poll.mp4",
+      "stories/2026-10-24_5-cta.mp4"
     ]
   },
   {
     "id": "2026-10-25",
     "publish_at": "2026-10-25T12:00:00-03:00",
     "images": [
-      "stories/dia15_01_gancho.jpg",
-      "stories/dia15_02_n1.jpg",
-      "stories/dia15_03_n2.jpg",
-      "stories/dia15_04_pergunta.jpg",
-      "stories/dia15_05_cta.jpg"
+      "stories/2026-10-25_1-hook.mp4",
+      "stories/2026-10-25_2-visual.mp4",
+      "stories/2026-10-25_3-tip.mp4",
+      "stories/2026-10-25_4-poll.mp4",
+      "stories/2026-10-25_5-cta.mp4"
     ]
   }
 ]

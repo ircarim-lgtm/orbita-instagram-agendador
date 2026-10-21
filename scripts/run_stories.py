@@ -62,8 +62,9 @@ def with_retry(fn, *args, tries: int = 4, wait: int = 15):
 
 
 def publish_story(url: str) -> str:
+    key = "video_url" if url.lower().endswith(".mp4") else "image_url"
     data = ig.api("POST", f"{ig.IG_ID}/media", data={
-        "media_type": "STORIES", "image_url": url, "access_token": ig.TOKEN,
+        "media_type": "STORIES", key: url, "access_token": ig.TOKEN,
     })
     ig.wait_ready(data["id"], tries=24)
     return ig.media_publish(data["id"])
