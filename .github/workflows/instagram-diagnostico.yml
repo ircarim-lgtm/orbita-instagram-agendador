@@ -1,0 +1,40 @@
+name: Instagram - diagnostico (somente leitura)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Consultar o perfil
+        env:
+          T: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, json, requests
+          T=os.environ["T"]; ID="17841431882100470"; V="v21.0"
+          out={}
+          def g(path, **p):
+              r=requests.get(f"https://graph.facebook.com/{V}/{path}", params={**p,"access_token":T}, timeout=30)
+              return {"status":r.status_code, "body":r.json()}
+          out["perfil"]=g(ID, fields="username,name,followers_count,media_count")
+          out["stories_ativos"]=g(f"{ID}/stories", fields="id,media_type,timestamp,permalink,media_url")
+          out["ultimas_midias"]=g(f"{ID}/media", fields="id,media_type,media_product_type,timestamp,permalink", limit=8)
+          json.dump(out, open("diagnostico.json","w"), ensure_ascii=False, indent=2)
+          PY
+      - name: Salvar resultado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diagnostico.json
+          git commit -m "Diagnostico do Instagram" && git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"
