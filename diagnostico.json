@@ -1,0 +1,35 @@
+{
+  "perfil": {
+    "status": 400,
+    "body": {
+      "error": {
+        "message": "Invalid OAuth access token - Cannot parse access token",
+        "code": 190,
+        "type": "OAuthException",
+        "fbtrace_id": "A5uBDA6DGHGX7pbRypURkeJ"
+      }
+    }
+  },
+  "stories_ativos": {
+    "status": 400,
+    "body": {
+      "error": {
+        "message": "Invalid OAuth access token - Cannot parse access token",
+        "code": 190,
+        "type": "OAuthException",
+        "fbtrace_id": "AxoKVP-zMNpv2Kx7JZOqcDQ"
+      }
+    }
+  },
+  "ultimas_midias": {
+    "status": 400,
+    "body": {
+      "error": {
+        "message": "Invalid OAuth access token - Cannot parse access token",
+        "code": 190,
+        "type": "OAuthException",
+        "fbtrace_id": "A8DxnYHR5G6jJ5KHssTE0YT"
+      }
+    }
+  }
+}
