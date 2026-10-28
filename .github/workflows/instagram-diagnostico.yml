@@ -25,7 +25,7 @@ jobs:
           T=os.environ["T"]; ID="17841431882100470"; V="v21.0"
           out={}
           def g(path, **p):
-              r=requests.get(f"https://graph.facebook.com/{V}/{path}", params={**p,"access_token":T}, timeout=30)
+              r=requests.get(f"https://graph.instagram.com/{V}/{path}", params={**p,"access_token":T}, timeout=30)
               return {"status":r.status_code, "body":r.json()}
           out["perfil"]=g(ID, fields="username,name,followers_count,media_count")
           out["stories_ativos"]=g(f"{ID}/stories", fields="id,media_type,timestamp,permalink,media_url")
