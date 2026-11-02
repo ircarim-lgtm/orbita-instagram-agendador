@@ -240,5 +240,68 @@
       "stories/2026-11-01_4-dica.jpg",
       "stories/2026-11-01_5-cta.jpg"
     ]
+  },
+  {
+    "id": "2026-11-02",
+    "publish_at": "2026-11-02T12:00:00-03:00",
+    "images": [
+      "stories/nov02_01_gancho.jpg",
+      "stories/nov02_02_lista.jpg",
+      "stories/nov02_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-03",
+    "publish_at": "2026-11-03T12:00:00-03:00",
+    "images": [
+      "stories/nov03_01_gancho.jpg",
+      "stories/nov03_02_lista.jpg",
+      "stories/nov03_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-04",
+    "publish_at": "2026-11-04T12:00:00-03:00",
+    "images": [
+      "stories/nov04_01_gancho.jpg",
+      "stories/nov04_02_lista.jpg",
+      "stories/nov04_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-05",
+    "publish_at": "2026-11-05T12:00:00-03:00",
+    "images": [
+      "stories/nov05_01_gancho.jpg",
+      "stories/nov05_02_lista.jpg",
+      "stories/nov05_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-06",
+    "publish_at": "2026-11-06T12:00:00-03:00",
+    "images": [
+      "stories/nov06_01_gancho.jpg",
+      "stories/nov06_02_lista.jpg",
+      "stories/nov06_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-07",
+    "publish_at": "2026-11-07T12:00:00-03:00",
+    "images": [
+      "stories/nov07_01_gancho.jpg",
+      "stories/nov07_02_lista.jpg",
+      "stories/nov07_03_cta.jpg"
+    ]
+  },
+  {
+    "id": "2026-11-08",
+    "publish_at": "2026-11-08T12:00:00-03:00",
+    "images": [
+      "stories/nov08_01_gancho.jpg",
+      "stories/nov08_02_lista.jpg",
+      "stories/nov08_03_cta.jpg"
+    ]
   }
 ]
